@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+header, main, footer {
+
+	display: 	block;
+	margin: 	0px;
+	padding: 	0px;
+	height: 	auto;
+	min-width: 600px;
+}
+
+header {
+	height: 80px;
+	background-color: blue;
+	
+	
+}
+
+h1 {
+	text-align: center;
+
+}
+footer {
+	
+	background-color: gray;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	
+}
+
+main {
+	/* flex = pour aligner les elts du main en ligne => aside et section sont alignés horizontalement*/
+	display: flex;
+}
+
+#filtres {
+	float: left;
+	width: auto;
+	
+	
+	
+}
+
+#filtres fieldset {
+	background-color: gainsboro;
+	border: none;
+	width: auto;
+	
+}
+
+
+#filtres fieldset p {
+	font-weight: bold;
+}
+
+
+
+#catalogue h4 {
+	
+	display: inline;
+	width: auto;
+
+}
+
+
+
+#elastique {
+	
+	
+	
+}
+
+#PU {
+	float: center;
+}
+
+#qtite {
+	float: right;
+}
+
+#panier {
+	display: rigth;
+	width: auto;
+	
+
+}
+
+

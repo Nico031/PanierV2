@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+/* TODO:
+- form: bordure arrondie, fond vert-citron
+- encadrer chaue label et champs de saisi
+- ces cadres ont un fond blanc opaque et ont les bords arrondis
+- aligner les label et champs saisi
+*/
+
+html, body, h1, form, fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	padding:  20px;
+}
+
+form {
+	/* réduire et centré*/
+	width: 400px;
+	margin: auto;
+	
+	/* encadrer*/
+	padding: 20px;
+	border-radius: 5px;
+	background-color: rgba(155,205,50);
+	
+	counter-reset: cpEtape;
+
+}
+
+
+fieldset {
+	border: none;
+	margin-bottom: 10px;
+	
+}
+form legend {
+  color: #384313;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  text-shadow: 0 1px 1px #c0d576;
+}
+form fieldset legend:before {
+  content: "Étape " counter(cpEtape) " : ";
+  counter-increment: cpEtape;
+}
+
+div {
+	border: thin solid white;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.3);
+	margin: 2px;
+	
+	
+}
+
+/* label: toutes les étiquettes ont même taille et sont correctement alignées */
+label {
+  
+  display: inline-block;
+  width: 100px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+ 
+}
+
+input, textarea {
+
+  /* Pour que tous les champs texte aient la même dimension */
+  width: 200px;
+ /* box-sizing: border-box;*/
+
+  /* Pour harmoniser le look & feel des bordures des champs texte */
+  border: 1px solid #999;
+  border-radius: 5px;
+  
+}
+/* agrandir la taille des champs et les centrer dans les cadre blancs (div)(?)*/
+input {
+	padding:5px;
+
+}
+textarea {
+  /* Pour aligner les champs texte multiligne avec leur étiquette */
+  vertical-align: top;
+
+  /* Pour donner assez de place pour écrire du texte */
+  height: 50px;
+  
+  margin-top: 5px;
+}
+
+/* les textes qui décrivent ce qu'il faut écrire dans les champs de saisis (attribut placeholder de l'input), sont en italiques*/
+[placeholder] {
+	font-style: italic;
+}
